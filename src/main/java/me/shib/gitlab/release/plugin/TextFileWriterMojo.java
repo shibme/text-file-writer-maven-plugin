@@ -25,8 +25,6 @@ public class TextFileWriterMojo extends AbstractMojo {
 
     @Override
     public void execute() throws MojoExecutionException {
-        getLog().info("Charset: " + charset);
-        getLog().info("Files Object: " + (null != files));
         if (null != files) {
             for (FileContent content : files) {
                 content.writeContentToFile(charset, getLog());

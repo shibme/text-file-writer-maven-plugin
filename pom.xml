@@ -73,7 +73,7 @@
                 <version>1.0.0</version>
                 <executions>
                     <execution>
-                        <phase>install</phase>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>text-file-writer</goal>
                         </goals>
@@ -129,17 +129,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>${project.distributionManagement.repository.id}</id>
-            <name>bintray</name>
-            <url>https://dl.bintray.com/${project.owner.id}/maven</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
