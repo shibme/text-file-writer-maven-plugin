@@ -1,9 +1,11 @@
 # Text File Writer - Maven Plugin
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/me.shib.plugin/text-file-writer-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/me.shib.plugin/text-file-writer-maven-plugin)
 [![Build Status](https://gitlab.com/shibme/text-file-writer-maven-plugin/badges/master/pipeline.svg)](https://gitlab.com/shibme/text-file-writer-maven-plugin/pipelines)
+
 Maven plugin to write text files with specified content
-This README.md file itself was generated with text-file-writer-maven-plugin plugin. Refer to this project's `pom.xml` to know how it is done.
-Or you can refer to the sample below
+
+* This [`README.md`](README.md) file itself was generated with text-file-writer-maven-plugin plugin. Refer to this project's [`pom.xml`](pom.xml) to know how it is done.
+* Alternatively, you can also refer to the below sample:
 ```
 <plugin>
 <groupId>me.shib.plugin</groupId>

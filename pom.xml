@@ -85,17 +85,13 @@
                                     <overwrite>true</overwrite>
                                     <lines>
                                         <line># ${project.name}</line>
-                                        <line>[![Maven
-                                            Central](https://maven-badges.herokuapp.com/maven-central/${project.groupId}/${project.artifactId}/badge.svg)](https://maven-badges.herokuapp.com/maven-central/${project.groupId}/${project.artifactId})
-                                        </line>
-                                        <line>[![Build
-                                            Status](https://gitlab.com/${project.owner.id}/${project.artifactId}/badges/master/pipeline.svg)](https://gitlab.com/${project.owner.id}/${project.artifactId}/pipelines)
-                                        </line>
+                                        <line>[![Maven Central](https://maven-badges.herokuapp.com/maven-central/${project.groupId}/${project.artifactId}/badge.svg)](https://maven-badges.herokuapp.com/maven-central/${project.groupId}/${project.artifactId})</line>
+                                        <line>[![Build Status](https://gitlab.com/${project.owner.id}/${project.artifactId}/badges/master/pipeline.svg)](https://gitlab.com/${project.owner.id}/${project.artifactId}/pipelines)</line>
+                                        <line></line>
                                         <line>${project.description}</line>
-                                        <line>This README.md file itself was generated with ${project.artifactId}
-                                            plugin. Refer to this project's `pom.xml` to know how it is done.
-                                        </line>
-                                        <line>Or you can refer to the sample below</line>
+                                        <line></line>
+                                        <line>* This [`README.md`](README.md) file itself was generated with ${project.artifactId} plugin. Refer to this project's [`pom.xml`](pom.xml) to know how it is done.</line>
+                                        <line>* Alternatively, you can also refer to the below sample:</line>
                                         <line>```</line>
                                         <line>&lt;plugin&gt;</line>
                                         <line>&lt;groupId&gt;${project.groupId}&lt;/groupId&gt;</line>
