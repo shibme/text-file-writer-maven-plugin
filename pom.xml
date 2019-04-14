@@ -67,6 +67,70 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>me.shib.plugin</groupId>
+                <artifactId>text-file-writer-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>text-file-writer</goal>
+                        </goals>
+                        <configuration>
+                            <charset>UTF-8</charset>
+                            <files>
+                                <file>
+                                    <destination>README.md</destination>
+                                    <overwrite>true</overwrite>
+                                    <lines>
+                                        <line># ${project.name}</line>
+                                        <line>[![Maven
+                                            Central](https://maven-badges.herokuapp.com/maven-central/${project.groupId}/${project.artifactId}/badge.svg)](https://maven-badges.herokuapp.com/maven-central/${project.groupId}/${project.artifactId})
+                                        </line>
+                                        <line>[![Build
+                                            Status](https://gitlab.com/${project.owner.id}/${project.artifactId}/badges/master/pipeline.svg)](https://gitlab.com/${project.owner.id}/${project.artifactId}/pipelines)
+                                        </line>
+                                        <line>${project.description}</line>
+                                        <line>This README.md file itself was generated with ${project.artifactId}
+                                            plugin. Refer to this project's `pom.xml` to know how it is done.
+                                        </line>
+                                        <line>Or you can refer to the sample below</line>
+                                        <line>```</line>
+                                        <line>&lt;plugin&gt;</line>
+                                        <line>&lt;groupId&gt;${project.groupId}&lt;/groupId&gt;</line>
+                                        <line>&lt;artifactId&gt;${project.artifactId}&lt;/artifactId&gt;</line>
+                                        <line>&lt;version&gt;${project.version}&lt;/version&gt;</line>
+                                        <line>&lt;executions&gt;</line>
+                                        <line>&lt;execution&gt;</line>
+                                        <line>&lt;phase&gt;install&lt;/phase&gt;</line>
+                                        <line>&lt;goals&gt;&lt;goal&gt;text-file-writer&lt;/goal&gt;&lt;/goals&gt;
+                                        </line>
+                                        <line>&lt;configuration&gt;</line>
+                                        <line>&lt;charset&gt;UTF-8&lt;/charset&gt;</line>
+                                        <line>&lt;files&gt;</line>
+                                        <line>&lt;file&gt;</line>
+                                        <line>&lt;destination&gt;README.md&lt;/destination&gt;</line>
+                                        <line>&lt;overwrite&gt;true&lt;/overwrite&gt;</line>
+                                        <line>&lt;lines&gt;</line>
+                                        <line>&lt;line&gt;# &#x24;{project.name}&lt;/line&gt;</line>
+                                        <line>&lt;line&gt;&#x24;{project.description}&lt;/line&gt;</line>
+                                        <line>&lt;/lines&gt;</line>
+                                        <line>&lt;/file&gt;</line>
+                                        <line>&lt;/files&gt;</line>
+                                        <line>&lt;/configuration&gt;</line>
+                                        <line>&lt;/execution&gt;</line>
+                                        <line>&lt;executions&gt;</line>
+                                        <line>&lt;/configuration&gt;</line>
+                                        <line>&lt;/plugin&gt;</line>
+                                        <line>```</line>
+                                    </lines>
+                                </file>
+                            </files>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -74,12 +138,13 @@
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-plugin-api</artifactId>
-            <version>3.6.0</version>
+            <version>3.5.3</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.maven.plugin-tools</groupId>
-            <artifactId>maven-plugin-annotations</artifactId>
-            <version>3.6.0</version>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-core</artifactId>
+            <version>3.5.3</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
