@@ -6,7 +6,7 @@
     <packaging>maven-plugin</packaging>
     <version>1.0.0</version>
     <name>Text File Writer - Maven Plugin</name>
-    <description>Maven plugin to write text files with specified content</description>
+    <description>Maven plugin to write dynamic text content into files (including maven properties)</description>
     <url>https://github.com/${project.owner.id}/${project.artifactId}</url>
 
     <issueManagement>
@@ -109,8 +109,8 @@
                                         <line>&lt;destination&gt;README.md&lt;/destination&gt;</line>
                                         <line>&lt;overwrite&gt;true&lt;/overwrite&gt;</line>
                                         <line>&lt;lines&gt;</line>
-                                        <line>&lt;line&gt;# &#x24;{project.name}&lt;/line&gt;</line>
-                                        <line>&lt;line&gt;&#x24;{project.description}&lt;/line&gt;</line>
+                                        <line>&lt;line&gt;# ${project.name}&lt;/line&gt;</line>
+                                        <line>&lt;line&gt;${project.description}&lt;/line&gt;</line>
                                         <line>&lt;/lines&gt;</line>
                                         <line>&lt;/file&gt;</line>
                                         <line>&lt;/files&gt;</line>

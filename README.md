@@ -2,7 +2,7 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/me.shib.plugin/text-file-writer-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/me.shib.plugin/text-file-writer-maven-plugin)
 [![Build Status](https://gitlab.com/shibme/text-file-writer-maven-plugin/badges/master/pipeline.svg)](https://gitlab.com/shibme/text-file-writer-maven-plugin/pipelines)
 
-Maven plugin to write text files with specified content
+Maven plugin to write dynamic text content into files (including maven properties)
 
 * This [`README.md`](README.md) file itself was generated with text-file-writer-maven-plugin plugin. Refer to this project's [`pom.xml`](pom.xml) to know how it is done.
 * Alternatively, you can also refer to the below sample:
@@ -23,7 +23,7 @@ Maven plugin to write text files with specified content
 <overwrite>true</overwrite>
 <lines>
 <line># Text File Writer - Maven Plugin</line>
-<line>Maven plugin to write text files with specified content</line>
+<line>Maven plugin to write dynamic text content into files (including maven properties)</line>
 </lines>
 </file>
 </files>
